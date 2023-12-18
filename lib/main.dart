@@ -68,8 +68,20 @@ class _MyHomePageState extends State<MyHomePage> {
           _buildReactionButton('間違いない！', 'sound9.mp3'),
         ],
       ),
+      floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
       bottomNavigationBar: BottomAppBar(
-        child: Text('総リアクション数: $_totalReactions'),
+        child: Row(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: <Widget>[
+            Padding(
+              padding: const EdgeInsets.symmetric(vertical: 20),
+              child: Text(
+                'リアクションカウント: $_totalReactions',
+                style: TextStyle(fontSize: 20),
+              ),
+            ),
+          ],
+        ),
       ),
     );
   }
